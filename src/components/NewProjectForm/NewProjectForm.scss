@@ -1,0 +1,71 @@
+.projectform{
+    margin: 1%;
+    padding:2%;
+    background-color: #316dc2;
+    border-radius: 15px;
+    mask:
+    radial-gradient(100% 80% at 100% 240% ,rgba(49, 109, 194, 0.7) 199.9%,white 200%) left,
+    radial-gradient(100% 80% at 0% 0%,white 99.9%,rgba(49, 109, 194, 0.7) 100%) right;
+    mask-size:50.05% 100%;
+    mask-repeat:no-repeat;
+
+    -webkit-mask:
+    radial-gradient(100% 80% at 100% 240% ,rgba(49, 109, 194, 0.7) 199.9%,white 200%) left,
+    radial-gradient(100% 80% at 0% 0%,white 99.9%,rgba(49, 109, 194, 0.7) 100%) right;
+    -webkit-mask-size:50.05% 100%;
+    -webkit-mask-repeat:no-repeat; 
+  
+}
+
+.projectlabel{
+    color:white;
+}
+
+.projectform{
+    .input{
+        margin-top: 15px;
+        margin-bottom: 15px;
+        width: 100%;
+        .css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root{
+            border-radius:10px;
+            background-color:#b7cdf7ce;
+            color:white;
+        }
+        input{
+            padding : 8px;
+        }
+        ::placeholder{
+            color:white;
+        }
+    }
+}
+
+
+.projectform{
+    border-width: 0px;
+    border-color: white;
+    .textarea{
+        width:100%;
+        color:white;
+
+        .css-1qxw4jt-MuiInputBase-root-MuiOutlinedInput-root{
+            background-color:#b7cdf7ce;
+            color:white;
+            border-width: 0px;
+            border-radius:15px;
+        }
+    }
+
+    textarea::placeholder{
+        color:white;
+    }
+}
+
+.projectform .projectbutton{
+    width:70%;
+    border-radius:13px;
+    border-width: 0px;
+    color:white;
+    background-color:#b7cdf7ce;
+    padding: 5px 0px;
+}

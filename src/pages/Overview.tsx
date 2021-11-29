@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import { Layout } from 'antd';
+import NewProjectForm from '../components/NewProjectForm/NewProjectForm';
 
 const { Header, Footer, Sider, Content } = Layout;
 
@@ -7,7 +8,7 @@ const { Header, Footer, Sider, Content } = Layout;
 
 export const Overview: FC = () => {
     return <div className="overview">
-        Overview
+        <NewProjectForm />
     </div>;
 };
 
