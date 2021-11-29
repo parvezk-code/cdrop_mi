@@ -1,4 +1,12 @@
+import SummarizeOutlinedIcon from '@mui/icons-material/SummarizeOutlined';
+import AirplayIcon from '@mui/icons-material/Airplay';
+import PersonIcon from '@mui/icons-material/Person';
+
 import ColumnData from "../shared/types/projectcolumndata.type";
+import { TimeLineDataType} from "../components/Sidebar/RightSidebar/Types";
+import { listType} from "../components/Sidebar/LeftSidebar/Types";
+
+
 
 export const columnData = (): Array<ColumnData> => {
     const data = [
@@ -80,4 +88,43 @@ export const columnData = (): Array<ColumnData> => {
     // }
 }
 
+export const leftSidebarData:Array<listType> = [
+    {label:"Overview", icon:<SummarizeOutlinedIcon/>},
+    {label:"Project", icon:<AirplayIcon/>},
+    {label:"Agent", icon:<PersonIcon/>},
+];
 
+
+export const fetchTimeLineData = (): Array<TimeLineDataType> => {
+    const data = [
+        {
+            id: '1',
+            message: 'Permission Disabled',
+            user: 'Aman - motorolla',
+            activity: 'Inactive from 30 min',
+            time: '9 sep 03:45',
+        },
+        {
+            id: '2',
+            message: 'No Activity',
+            user: 'Vasim - samsung',
+            activity: 'Inactive from 30 min',
+            time: '9 sep 03:45'
+        },
+        {
+            id: '3',
+            message: 'Hurry',
+            user: 'Shiva - MI',
+            activity: 'Inactive from 30 min',
+            time: '9 sep 03:45'
+        },
+        {
+            id: '4',
+            message: 'No Activity',
+            user: 'Aman - motorolla',
+            activity: 'Inactive from 30 min',
+            time: '9 sep 03:45'
+        }
+    ];
+    return data;
+}
