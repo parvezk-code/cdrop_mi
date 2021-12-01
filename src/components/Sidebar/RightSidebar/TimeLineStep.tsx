@@ -45,8 +45,6 @@ const TimeLineStep: FC<TimeLineDataType> = (props) => {
                 <p className="details time" >{props.time}</p>
             </TimelineContent>
         </TimelineItem>
-
-
     );
 }
 

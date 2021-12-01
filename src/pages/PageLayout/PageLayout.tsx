@@ -1,5 +1,4 @@
 import { FC, } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "../../components/Navbar/Navbar";
 import { Overview, Agent } from "../Overview";
 import ListContainer from "../../components/Sidebar/LeftSidebar/ListContainer";
@@ -8,14 +7,17 @@ import { Box } from "@mui/system";
 import { fetchTimeLineData } from "../../repository/projectrepository";
 import "./PageLayout.scss";
 import Sidebar from "../../components/Sidebar/Sidebar";
+import AppRouter from "../../AppRouter";
 
-type PageLayoutProps = {
-  leftSiderCollapsed: boolean,
-  rightSiderCollapsed: boolean
-}
+const PageLayout: FC = () => {
 
-const PageLayout: FC<PageLayoutProps> = props => {
-  const home = <Overview />;
+  const contentItems = [
+    {path:"/", element:<Overview />},
+    {path:"/home", element:<Overview />},
+    {path:"/overview", element:<Overview />},
+    {path:"/project", element:<Overview />},
+    {path:"/agent", element:<Agent />},
+  ];
 
   return (
     <>
@@ -26,21 +28,13 @@ const PageLayout: FC<PageLayoutProps> = props => {
         </Sidebar>
 
         <Box className="content">
-          <Router>
-            <Routes>
-              <Route path="/" element={home} />
-              <Route path="/home" element={home} />
-              <Route path="/overview" element={<Overview />} />
-              <Route path="/project" element={<Overview />} />
-              <Route path="/agent" element={<Agent />} />
-            </Routes>
-          </Router>
+          <AppRouter list={contentItems} />
         </Box>
 
         <Sidebar direction={'right'} minWidth={'55px'} maxWidth={'210px'}>
           <TimelineContainer fetchTimeLineDataFn={fetchTimeLineData} />
         </Sidebar>
-        
+
       </Box>
     </>
   );

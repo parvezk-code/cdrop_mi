@@ -11,7 +11,7 @@ type getTimeLineFunDataType = () => TimeLineDataType[];
 export type TimeLineContainerPropType =
     { fetchTimeLineDataFn: getTimeLineFunDataType };
 
-export type listType = {label:string, icon:any};
+export type listType = {label:string, icon:JSX.Element};
 
 
 

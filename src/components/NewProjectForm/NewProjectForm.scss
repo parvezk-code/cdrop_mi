@@ -1,5 +1,6 @@
 .projectform{
-    margin: 1%;
+    //margin: 1%;
+    margin-bottom: 15px;
     padding:2%;
     background-color: #316dc2;
     border-radius: 15px;
@@ -17,33 +18,30 @@
   
 }
 
-.projectlabel{
-    color:white;
-}
-
 .projectform{
+    
+    border-width: 0px;
+    border-color: white;
+
+    .projectlabel{
+        color:white;
+    }
+
     .input{
         margin-top: 15px;
         margin-bottom: 15px;
         width: 100%;
+        padding : 8px;
         .css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root{
             border-radius:10px;
             background-color:#b7cdf7ce;
             color:white;
         }
-        input{
-            padding : 8px;
-        }
         ::placeholder{
             color:white;
         }
     }
-}
-
-
-.projectform{
-    border-width: 0px;
-    border-color: white;
+    
     .textarea{
         width:100%;
         color:white;
@@ -54,18 +52,24 @@
             border-width: 0px;
             border-radius:15px;
         }
+
+        ::placeholder{
+            color:white;
+        }
     }
 
-    textarea::placeholder{
+    .projectbutton{
+        width:70%;
+        border-radius:13px;
+        border-width: 0px;
         color:white;
+        background-color:#b7cdf7ce;
+        padding: 5px 0px;
+    }
+
+    .projectbutton:hover{
+        background-color:#b7cdf7ce;
     }
 }
 
-.projectform .projectbutton{
-    width:70%;
-    border-radius:13px;
-    border-width: 0px;
-    color:white;
-    background-color:#b7cdf7ce;
-    padding: 5px 0px;
-}
+

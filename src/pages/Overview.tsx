@@ -1,14 +1,14 @@
 import { FC } from 'react';
-import { Layout } from 'antd';
 import NewProjectForm from '../components/NewProjectForm/NewProjectForm';
-
-const { Header, Footer, Sider, Content } = Layout;
-
+import AgentsWorkHistory from '../components/Tables/ProjectAgents/AgentsWorkHistory';
+import { fetchTableAgentData } from '../repository/projectrepository';
 
 
 export const Overview: FC = () => {
     return <div className="overview">
         <NewProjectForm />
+        <AgentsWorkHistory dataSource={fetchTableAgentData()} title={() => "Top Active Caller"}
+            bordered={true} />
     </div>;
 };
 

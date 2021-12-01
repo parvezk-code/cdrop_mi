@@ -6,7 +6,7 @@ const App: FC = () => {
   
   return (
     <div className="App">
-      <PageLayout leftSiderCollapsed={false} rightSiderCollapsed={false} />
+      <PageLayout />
     </div>
   );
 };

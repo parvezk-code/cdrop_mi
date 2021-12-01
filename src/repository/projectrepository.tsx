@@ -5,7 +5,7 @@ import PersonIcon from '@mui/icons-material/Person';
 import ColumnData from "../shared/types/projectcolumndata.type";
 import { TimeLineDataType} from "../components/Sidebar/RightSidebar/Types";
 import { listType} from "../components/Sidebar/LeftSidebar/Types";
-
+import {TableAgentData, randomAgentData} from '../components/Tables/ProjectAgents/Types';
 
 
 export const columnData = (): Array<ColumnData> => {
@@ -127,4 +127,15 @@ export const fetchTimeLineData = (): Array<TimeLineDataType> => {
         }
     ];
     return data;
+}
+
+export const fetchTableAgentData = (): Array<TableAgentData> => {
+
+    const data:Array<TableAgentData> = [];
+
+    for (let i = 0; i < 50; i++) {
+        data.push(randomAgentData());
+    }
+    return data;
+
 }
